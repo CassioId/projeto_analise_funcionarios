@@ -1,0 +1,42 @@
+# Conteúdo do requirements.txt
+
+pandas==2.2.2
+openpyxl==3.1.5
+
+# Como criar o arquivo
+🔹 Opção 1: Criar manualmente no PowerShell
+
+# Execute o comando abaixo na pasta do projeto:
+
+> New-Item requirements.txt -ItemType File
+
+Em seguida, abra o arquivo em um editor de texto (Bloco de Notas ou VS Code) e cole o conteúdo acima.
+
+🔹 Opção 2: Criar diretamente pelo terminal
+
+Você também pode gerar o arquivo automaticamente com este comando:
+
+@"
+pandas==2.2.2
+openpyxl==3.1.5
+"@ | Out-File -Encoding utf8 requirements.txt
+🔹 Opção 3: Gerar a partir do ambiente virtual
+
+Se as bibliotecas já estiverem instaladas, utilize:
+
+pip freeze > requirements.txt
+📥 Como instalar as dependências
+
+Após criar o arquivo, instale as bibliotecas com:
+
+pip install -r requirements.txt
+
+Estrutura Final do Projeto
+PRJDADOS/
+│── venv/
+└── projeto_analise_funcionarios/
+    │── script.py
+    │── funcionarios.db
+    │── relatorio_funcionarios.xlsx
+    │── README.md
+    │── requirements.txt
